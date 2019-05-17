@@ -1,6 +1,11 @@
+//handle the submit 
 document.getElementById('sizePicker').onsubmit = function(){
     submitting();
 }
+
+//1. stop page from reload another source
+//2. assign the values of the submit to variables
+//3. make a grid with these variables
 
 function submitting(){
     event.preventDefault();
@@ -9,7 +14,7 @@ function submitting(){
     makeGrid(height,width);
     };
 
-
+//1. create the grid in connection to required height and width
 function makeGrid(height,width){
     const table = document.getElementById("pixel_canvas");
     let field = '';
@@ -26,6 +31,7 @@ function makeGrid(height,width){
     trigger();
 }
 
+// color the actual cell with a click 
 function trigger(){
   const picker = document.getElementById("colorPicker");
   const cell = document.getElementsByClassName("cell");
@@ -37,4 +43,5 @@ function trigger(){
     }
 }
 
+// create a default grid
 makeGrid(5,5);
