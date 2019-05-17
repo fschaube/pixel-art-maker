@@ -4,8 +4,8 @@ document.getElementById('sizePicker').onsubmit = function(){
 }
 
 //1. stop page from reload another source
-//2. assign the values of the submit to variables
-//3. make a grid with these variables
+//2. assign the values of the submit to constances
+//3. make a grid with these constances
 
 function submitting(){
     event.preventDefault();
@@ -14,7 +14,7 @@ function submitting(){
     makeGrid(height,width);
     };
 
-//1. create the grid in connection to required height and width
+//create the grid in connection to the required height and width
 function makeGrid(height,width){
     const table = document.getElementById("pixel_canvas");
     let field = '';
